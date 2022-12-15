@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="acessar_minha_conta">Acessar minha conta</string>
+    <string name="senha">Senha</string>
+    <string name="modulo_adm">Acessar módulo do administrador</string>
+    <string name="digite_o_valor_que_deseja_sacar">Digite o valor que deseja sacar:</string>
+    <string name="voltar_ao_menu_anterior">Voltar ao menu anterior</string>
+</resources>

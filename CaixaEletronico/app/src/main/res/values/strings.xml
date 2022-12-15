@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">CaixaEletronico</string>
+    <string name="nome_app">Banco Solar</string>
+    <string name="modulo_cliente">Acessar minha conta</string>
+    <string name="senha">Senha</string>
+    <string name="rodape">Copyright | SunBank 2022 \nTodos os direitos reservados</string>
+    <string name="modulo_adm">Acessar módulo do administrador</string>
+    <string name="digite_o_valor_que_deseja_sacar">Digite o valor que deseja sacar:</string>
+    <string name="notasZeradas">0</string>
+    <string name="efetuar_saque">Efetuar Saque</string>
+    <string name="voltar_ao_menu_anterior">Voltar ao menu anterior</string>
+</resources>

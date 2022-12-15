@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ronded_rectangle"
+    android:backgroundTint="#F4BC33"
+    android:textAlignment="center"
+    tools:context=".LoginActivity">
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/gifImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        android:src="@drawable/fundo_login_banco"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_login"
+        android:layout_width="377dp"
+        android:layout_height="402dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@android:color/transparent"
+        android:backgroundTint="@android:color/transparent"
+        android:backgroundTintMode="src_in"
+        android:foregroundTintMode="src_in"
+        android:visibility="visible"
+        app:cardBackgroundColor="@android:color/transparent"
+        app:cardElevation="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/gifImageView"
+        app:layout_constraintEnd_toEndOf="@+id/gifImageView"
+        app:layout_constraintHorizontal_bias="0.486"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/gifImageView"
+        tools:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="397dp"
+            android:background="@drawable/ronded_rectangle"
+            android:orientation="vertical"
+            android:textAlignment="center">
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="17dp"
+                android:scrollbarSize="4dp" />
+
+            <TextView
+                android:id="@+id/tv_valorQueDesejaSacar"
+                android:layout_width="match_parent"
+                android:layout_height="58dp"
+                android:gravity="center"
+                android:text="Digite seu usuário e senha para continuar"
+                android:textAlignment="center"
+                android:textColor="@color/azul_fundo"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="321dp">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textInputLayout"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="340dp"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="8dp"
+                    android:textAlignment="textStart"
+                    app:boxStrokeColor="@color/amarelo_sol"
+                    app:hintTextColor="@color/azul_fundo"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.486"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.019">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/et_usuario"
+                        android:layout_width="340dp"
+                        android:layout_height="55dp"
+                        android:layout_gravity="center"
+                        android:drawableEnd="@drawable/ic_baseline_person_24"
+                        android:fontFamily="sans-serif-black"
+                        android:hint="Usuário"
+                        android:textColor="@color/cinza_escuro"
+                        android:textCursorDrawable="?android:attr/textCursorDrawable"
+                        tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck,TouchTargetSizeCheck">
+
+                    </androidx.appcompat.widget.AppCompatEditText>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textInputLayout2"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="340dp"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="10dp"
+                    android:textAlignment="center"
+                    app:boxStrokeColor="@color/amarelo_sol"
+                    app:hintTextColor="@color/azul_fundo"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textInputLayout"
+                    app:layout_constraintVertical_bias="0.009"
+                    app:passwordToggleEnabled="true"
+                    app:passwordToggleTint="@color/amarelo_sol">
+
+                    <EditText
+                        android:id="@+id/et_senha"
+                        android:layout_width="340dp"
+                        android:layout_height="55dp"
+                        android:fontFamily="sans-serif-black"
+                        android:hint="@string/senha"
+                        android:inputType="textPassword"
+                        android:minHeight="48dp"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/cinza_escuro"
+                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <Button
+                    android:id="@+id/btn_voltarAoMenuPrincipalMainActivity"
+                    android:layout_width="336dp"
+                    android:layout_height="72dp"
+                    android:layout_marginBottom="8dp"
+                    android:backgroundTint="@color/vermelho"
+                    android:enabled="true"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="sair"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.487"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/btn_login"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <Button
+                    android:id="@+id/btn_login"
+                    android:layout_width="336dp"
+                    android:layout_height="72dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:backgroundTint="@color/amarelo_desativado"
+                    android:enabled="false"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="@string/modulo_cliente"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.487"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textInputLayout2"
+                    app:layout_constraintVertical_bias="0.101" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_cotaMinima"
+        android:layout_width="384dp"
+        android:layout_height="182dp"
+        android:background="@android:color/transparent"
+        android:backgroundTint="@android:color/transparent"
+        android:backgroundTintMode="src_in"
+        android:visibility="gone"
+        app:cardBackgroundColor="@android:color/transparent"
+        app:cardElevation="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/gifImageView"
+        app:layout_constraintEnd_toEndOf="@+id/gifImageView"
+        app:layout_constraintStart_toStartOf="@+id/gifImageView"
+        app:layout_constraintTop_toTopOf="@+id/gifImageView"
+        tools:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="185dp"
+            android:background="@drawable/ronded_rectangle"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:textAlignment="center">
+
+            <TextView
+                android:id="@+id/tv_mensagemErroCotaMinima"
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:fontFamily="sans-serif-black"
+                android:gravity="center"
+                android:text="Caixa Vazio: Chame o Operador!"
+                android:textAlignment="center"
+                android:textColor="@color/vermelho"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btn_voltarAoMenuAnteriorCotaMinima"
+                android:layout_width="336dp"
+                android:layout_height="72dp"
+                android:backgroundTint="@color/vermelho"
+                android:enabled="true"
+                android:fontFamily="sans-serif-medium"
+                android:text="Voltar ao menu principal"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/tv_rodape"
+        android:layout_width="376dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="16dp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:lineSpacingMultiplier="1.2"
+        android:text="@string/rodape"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="@color/amarelo_desativado"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/gifImageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.451"
+        app:layout_constraintStart_toStartOf="@+id/gifImageView" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

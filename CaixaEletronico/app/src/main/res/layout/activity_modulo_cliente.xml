@@ -1,0 +1,1309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cl_telaCliente"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ModuloClienteActivity">
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/gifImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        android:src="@drawable/fundo_tela_cliente"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/tv_nomeCliente"
+        android:layout_width="271dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="16dp"
+        android:gravity="center_vertical"
+        android:text="BEM-VINDO, "
+        android:textAllCaps="true"
+        android:textColor="@color/amarelo_sol"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/gifImageView"
+        app:layout_constraintHorizontal_bias="0.821"
+        app:layout_constraintStart_toStartOf="@+id/gifImageView"
+        app:layout_constraintTop_toTopOf="@+id/gifImageView" />
+
+    <TextView
+        android:id="@+id/tv_rodapeCliente"
+        android:layout_width="376dp"
+        android:layout_height="42dp"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:gravity="center_horizontal|top"
+        android:lineSpacingMultiplier="1.2"
+        android:text="@string/rodape"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="@color/amarelo_desativado"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/gifImageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/gifImageView" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_menuPrincipal"
+        android:layout_width="381dp"
+        android:layout_height="501dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@android:color/transparent"
+        android:backgroundTint="@android:color/transparent"
+        android:backgroundTintMode="src_in"
+        android:foregroundTintMode="src_in"
+        android:visibility="visible"
+        app:cardBackgroundColor="@android:color/transparent"
+        app:cardElevation="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/gifImageView"
+        app:layout_constraintEnd_toEndOf="@+id/gifImageView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/gifImageView"
+        tools:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/ronded_rectangle"
+            android:orientation="vertical"
+            android:textAlignment="center">
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="17dp"
+                android:scrollbarSize="4dp" />
+
+            <TextView
+                android:id="@+id/tv_escolhaUmaOpcaoMenuPrincipal"
+                android:layout_width="match_parent"
+                android:layout_height="58dp"
+                android:gravity="center"
+                android:text="O que deseja fazer?"
+                android:textAlignment="center"
+                android:textColor="@color/azul_fundo"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="424dp">
+
+                <Button
+                    android:id="@+id/btn_minhaLocalizacaoMenuPrincipal"
+                    android:layout_width="120dp"
+                    android:layout_height="111dp"
+                    android:background="@drawable/ronded_rectangle"
+                    android:backgroundTint="@color/amarelo_sol"
+                    android:gravity="bottom|center_horizontal"
+                    android:text="Minha Localização"
+                    android:textColor="@color/azul_fundo"
+                    android:textSize="11sp"
+                    app:icon="@drawable/localizacao"
+                    app:iconGravity="textTop"
+                    app:iconPadding="7dp"
+                    app:iconSize="60dp"
+                    app:iconTint="@android:color/transparent"
+                    app:iconTintMode="add"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.505"
+                    app:layout_constraintStart_toEndOf="@+id/btn_pagamentosMenuPrincipal"
+                    app:layout_constraintTop_toBottomOf="@+id/btn_SaqueMenuPrincipal"
+                    app:layout_constraintVertical_bias="0.248" />
+
+                <Button
+                    android:id="@+id/btn_verSaldoMenuPrincipal"
+                    android:layout_width="120dp"
+                    android:layout_height="111dp"
+                    android:background="@drawable/ronded_rectangle"
+                    android:backgroundTint="@color/amarelo_sol"
+                    android:gravity="bottom|center_horizontal"
+                    android:text="Saldo"
+                    android:textColor="@color/azul_fundo"
+                    android:textSize="11sp"
+                    app:icon="@drawable/saldo"
+                    app:iconGravity="textTop"
+                    app:iconPadding="5dp"
+                    app:iconSize="60dp"
+                    app:iconTint="@android:color/transparent"
+                    app:iconTintMode="add"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.158"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.143" />
+
+                <Button
+                    android:id="@+id/btn_SaqueMenuPrincipal"
+                    android:layout_width="120dp"
+                    android:layout_height="111dp"
+                    android:background="@drawable/ronded_rectangle"
+                    android:backgroundTint="@color/amarelo_sol"
+                    android:gravity="bottom|center_horizontal"
+                    android:text="Saque"
+                    android:textColor="@color/azul_fundo"
+                    android:textSize="11sp"
+                    app:icon="@drawable/saque"
+                    app:iconGravity="textTop"
+                    app:iconPadding="5dp"
+                    app:iconSize="60dp"
+                    app:iconTint="@android:color/transparent"
+                    app:iconTintMode="add"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.505"
+                    app:layout_constraintStart_toEndOf="@+id/btn_verSaldoMenuPrincipal"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.143" />
+
+                <Button
+                    android:id="@+id/btn_pagamentosMenuPrincipal"
+                    android:layout_width="120dp"
+                    android:layout_height="111dp"
+                    android:layout_marginStart="4dp"
+                    android:background="@drawable/ronded_rectangle"
+                    android:backgroundTint="@color/amarelo_sol"
+                    android:gravity="bottom|center_horizontal"
+                    android:text="Pagamentos"
+                    android:textColor="@color/azul_fundo"
+                    android:textSize="11sp"
+                    app:icon="@drawable/boleto"
+                    app:iconGravity="textTop"
+                    app:iconPadding="7dp"
+                    app:iconSize="60dp"
+                    app:iconTint="@android:color/transparent"
+                    app:iconTintMode="add"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.143"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/btn_verSaldoMenuPrincipal"
+                    app:layout_constraintVertical_bias="0.248" />
+
+                <Button
+                    android:id="@+id/btn_sairMenuPrincipal"
+                    android:layout_width="346dp"
+                    android:layout_height="72dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="8dp"
+                    android:backgroundTint="@color/vermelho"
+                    android:enabled="true"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Sair"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.485"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/btn_minhaLocalizacaoMenuPrincipal"
+                    app:layout_constraintVertical_bias="0.636" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_saque"
+        android:layout_width="378dp"
+        android:layout_height="342dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@android:color/transparent"
+        android:backgroundTint="@android:color/transparent"
+        android:backgroundTintMode="src_in"
+        android:foregroundTintMode="src_in"
+        android:visibility="gone"
+        app:cardBackgroundColor="@android:color/transparent"
+        app:cardElevation="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/gifImageView"
+        app:layout_constraintEnd_toEndOf="@+id/gifImageView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/gifImageView"
+        tools:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="341dp"
+            android:background="@drawable/ronded_rectangle"
+            android:orientation="vertical"
+            android:textAlignment="center">
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="17dp"
+                android:scrollbarSize="4dp" />
+
+            <TextView
+                android:id="@+id/tv_valorQueDesejaSacar"
+                android:layout_width="match_parent"
+                android:layout_height="58dp"
+                android:gravity="center"
+                android:text="@string/digite_o_valor_que_deseja_sacar"
+                android:textAlignment="center"
+                android:textColor="@color/azul_fundo"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="251dp">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_pagamentos"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="340dp"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="8dp"
+                    android:textAlignment="textStart"
+                    app:boxStrokeColor="@color/amarelo_sol"
+                    app:hintTextColor="@color/azul_fundo"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.486"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.019">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/et_valorSaque"
+                        android:layout_width="340dp"
+                        android:layout_height="55dp"
+                        android:layout_gravity="center"
+                        android:digits="0123456789"
+                        android:drawableEnd="@drawable/ic_baseline_attach_money_24"
+                        android:fontFamily="sans-serif-black"
+                        android:hint="Valor Ex.: R$1.000,00"
+                        android:inputType="numberDecimal"
+                        android:textColor="#363A43"
+                        tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck,TouchTargetSizeCheck">
+
+                    </androidx.appcompat.widget.AppCompatEditText>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <Button
+                    android:id="@+id/btn_voltarAoMenuAnteriorCliente"
+                    android:layout_width="336dp"
+                    android:layout_height="72dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="8dp"
+                    android:backgroundTint="@color/vermelho"
+                    android:enabled="true"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="@string/voltar_ao_menu_anterior"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.476"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/btn_efetuarSaque"
+                    app:layout_constraintVertical_bias="1.0" />
+
+                <Button
+                    android:id="@+id/btn_efetuarSaque"
+                    android:layout_width="336dp"
+                    android:layout_height="72dp"
+                    android:layout_marginBottom="8dp"
+                    android:backgroundTint="@color/amarelo_desativado"
+                    android:enabled="false"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="@string/efetuar_saque"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.476"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/til_pagamentos"
+                    app:layout_constraintVertical_bias="0.18" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_notasSacadas"
+        android:layout_width="378dp"
+        android:layout_height="601dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@android:color/transparent"
+        android:backgroundTint="@android:color/transparent"
+        android:backgroundTintMode="src_in"
+        android:foregroundTintMode="src_in"
+        android:visibility="gone"
+        app:cardBackgroundColor="@android:color/transparent"
+        app:cardElevation="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/gifImageView"
+        app:layout_constraintEnd_toEndOf="@+id/gifImageView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/gifImageView"
+        tools:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ronded_rectangle"
+            android:orientation="vertical"
+            android:textAlignment="center">
+
+            <TextView
+                android:id="@+id/tv_notasSacadas"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:text="Notas Sacadas:"
+                android:textAlignment="center"
+                android:textColor="@color/azul_fundo"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="546dp">
+
+                <Button
+                    android:id="@+id/btn_realizarNovoSaque"
+                    android:layout_width="336dp"
+                    android:layout_height="72dp"
+                    android:backgroundTint="@color/amarelo_sol"
+                    android:enabled="true"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Realizar novo saque"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView"
+                    app:layout_constraintVertical_bias="0.08" />
+
+                <Button
+                    android:id="@+id/btn_voltarAoMenuAnteriorNotasSacadas"
+                    android:layout_width="336dp"
+                    android:layout_height="72dp"
+                    android:backgroundTint="@color/vermelho"
+                    android:enabled="true"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="@string/voltar_ao_menu_anterior"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/btn_realizarNovoSaque"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="336dp"
+                    android:layout_height="374dp"
+                    android:scaleType="fitXY"
+                    app:layout_constraintBottom_toTopOf="@+id/btn_voltarAoMenuAnteriorNotasSacadas"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.514"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0"
+                    app:srcCompat="@drawable/cedulas" />
+
+                <LinearLayout
+                    android:layout_width="200dp"
+                    android:layout_height="368dp"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageView"
+                    app:layout_constraintEnd_toEndOf="@+id/imageView"
+                    app:layout_constraintHorizontal_bias="0.948"
+                    app:layout_constraintStart_toStartOf="@+id/imageView"
+                    app:layout_constraintTop_toTopOf="@+id/imageView"
+                    app:layout_constraintVertical_bias="0.0">
+
+                    <TextView
+                        android:id="@+id/tv_nota100"
+                        android:layout_width="match_parent"
+                        android:layout_height="61dp"
+                        android:gravity="center"
+                        android:text="@string/notasZeradas"
+                        android:textAlignment="center"
+                        android:textColor="@color/cor_nota100"
+                        android:textSize="50sp" />
+
+                    <TextView
+                        android:id="@+id/tv_nota50"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:gravity="center"
+                        android:text="@string/notasZeradas"
+                        android:textAlignment="center"
+                        android:textColor="@color/cor_nota50"
+                        android:textSize="50sp" />
+
+                    <TextView
+                        android:id="@+id/tv_nota20"
+                        android:layout_width="match_parent"
+                        android:layout_height="59dp"
+                        android:gravity="center"
+                        android:text="@string/notasZeradas"
+                        android:textAlignment="center"
+                        android:textColor="@color/cor_nota20"
+                        android:textSize="50sp" />
+
+                    <TextView
+                        android:id="@+id/tv_nota10"
+                        android:layout_width="match_parent"
+                        android:layout_height="62dp"
+                        android:gravity="center"
+                        android:text="@string/notasZeradas"
+                        android:textAlignment="center"
+                        android:textColor="@color/cor_nota10"
+                        android:textSize="50sp" />
+
+                    <TextView
+                        android:id="@+id/tv_nota5"
+                        android:layout_width="match_parent"
+                        android:layout_height="63dp"
+                        android:gravity="center"
+                        android:text="@string/notasZeradas"
+                        android:textAlignment="center"
+                        android:textColor="@color/cor_nota5"
+                        android:textSize="50sp" />
+
+                    <TextView
+                        android:id="@+id/tv_nota2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/notasZeradas"
+                        android:textAlignment="center"
+                        android:textColor="@color/cor_nota2"
+                        android:textSize="50sp" />
+
+                </LinearLayout>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_saqueIndisponivel"
+        android:layout_width="375dp"
+        android:layout_height="276dp"
+        android:background="@android:color/transparent"
+        android:backgroundTint="@android:color/transparent"
+        android:backgroundTintMode="src_in"
+        android:visibility="gone"
+        app:cardBackgroundColor="@android:color/transparent"
+        app:cardElevation="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/gifImageView"
+        app:layout_constraintEnd_toEndOf="@+id/gifImageView"
+        app:layout_constraintStart_toStartOf="@+id/gifImageView"
+        app:layout_constraintTop_toTopOf="@+id/gifImageView"
+        tools:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="274dp"
+            android:background="@drawable/ronded_rectangle"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:textAlignment="center">
+
+            <TextView
+                android:id="@+id/tv_mensagemErroSaque"
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:fontFamily="sans-serif-black"
+                android:gravity="center"
+                android:text="Saque não realizado por falta de cédulas"
+                android:textAlignment="center"
+                android:textColor="@color/vermelho"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btn_tentarRealizarNovoSaque"
+                android:layout_width="336dp"
+                android:layout_height="72dp"
+                android:backgroundTint="@color/amarelo_sol"
+                android:enabled="true"
+                android:fontFamily="sans-serif-medium"
+                android:text="Tentar novamente"
+                android:textStyle="bold" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="11dp" />
+
+            <Button
+                android:id="@+id/btn_voltarAoMenuAnteriorSaldoInsuficiente"
+                android:layout_width="336dp"
+                android:layout_height="72dp"
+                android:backgroundTint="@color/vermelho"
+                android:enabled="true"
+                android:fontFamily="sans-serif-medium"
+                android:text="@string/voltar_ao_menu_anterior"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_minhaLocalizacao"
+        android:layout_width="380dp"
+        android:layout_height="609dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@android:color/transparent"
+        android:backgroundTint="@android:color/transparent"
+        android:backgroundTintMode="src_in"
+        android:foregroundTintMode="src_in"
+        android:visibility="gone"
+        app:cardBackgroundColor="@android:color/transparent"
+        app:cardElevation="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/gifImageView"
+        app:layout_constraintEnd_toEndOf="@+id/gifImageView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/gifImageView"
+        tools:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="602dp"
+            android:background="@drawable/ronded_rectangle"
+            android:orientation="vertical"
+            android:textAlignment="center">
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="17dp"
+                android:scrollbarSize="4dp" />
+
+            <TextView
+                android:id="@+id/tv_voceEstaAqui"
+                android:layout_width="match_parent"
+                android:layout_height="58dp"
+                android:gravity="center"
+                android:text="Localização Atual:"
+                android:textAlignment="center"
+                android:textColor="@color/azul_fundo"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="526dp">
+
+
+                <Button
+                    android:id="@+id/btn_obterLocalizacaoCliente"
+                    android:layout_width="346dp"
+                    android:layout_height="58dp"
+                    android:backgroundTint="@color/amarelo_sol"
+                    android:text="Obter Localização"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.51"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <WebView
+                    android:id="@+id/wv_googleMaps"
+                    android:layout_width="375dp"
+                    android:layout_height="397dp"
+                    android:background="@drawable/ronded_rectangle"
+                    android:backgroundTint="#FFFFFF"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.571"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/btn_obterLocalizacaoCliente"
+                    app:layout_constraintVertical_bias="0.0">
+
+                </WebView>
+
+                <Button
+                    android:id="@+id/btn_voltarAoMenuAnteriorMinhaLocalizacao"
+                    android:layout_width="346dp"
+                    android:layout_height="58dp"
+                    android:layout_marginBottom="8dp"
+                    android:backgroundTint="@color/vermelho"
+                    android:enabled="true"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="@string/voltar_ao_menu_anterior"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.52"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/wv_googleMaps"
+                    app:layout_constraintVertical_bias="0.384" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_saldoCliente"
+        android:layout_width="377dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@android:color/transparent"
+        android:backgroundTint="@android:color/transparent"
+        android:backgroundTintMode="src_in"
+        android:foregroundTintMode="src_in"
+        android:visibility="gone"
+        app:cardBackgroundColor="@android:color/transparent"
+        app:cardElevation="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/gifImageView"
+        app:layout_constraintEnd_toEndOf="@+id/gifImageView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/gifImageView"
+        tools:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="390dp"
+            android:background="@drawable/ronded_rectangle"
+            android:orientation="vertical"
+            android:textAlignment="center">
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="17dp"
+                android:scrollbarSize="4dp" />
+
+            <TextView
+                android:id="@+id/tv_saldoCliente"
+                android:layout_width="match_parent"
+                android:layout_height="58dp"
+                android:gravity="center"
+                android:text="Saldo Atual:"
+                android:textAlignment="center"
+                android:textColor="@color/azul_fundo"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/btn_voltarAoMenuAnteriorSaldoCliente"
+                    android:layout_width="346dp"
+                    android:layout_height="72dp"
+                    android:layout_marginBottom="16dp"
+                    android:backgroundTint="@color/vermelho"
+                    android:enabled="true"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="@string/voltar_ao_menu_anterior"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.516"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_saldoAtual"
+                    app:layout_constraintVertical_bias="0.878" />
+
+                <TextView
+                    android:id="@+id/tv_saldoAtual"
+                    android:layout_width="316dp"
+                    android:layout_height="91dp"
+                    android:gravity="center"
+                    android:textColor="@color/amarelo_sol"
+                    android:textSize="50sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.491"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.303" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_pagamentoCliente"
+        android:layout_width="377dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@android:color/transparent"
+        android:backgroundTint="@android:color/transparent"
+        android:backgroundTintMode="src_in"
+        android:foregroundTintMode="src_in"
+        android:visibility="gone"
+        app:cardBackgroundColor="@android:color/transparent"
+        app:cardElevation="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/gifImageView"
+        app:layout_constraintEnd_toEndOf="@+id/gifImageView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/gifImageView"
+        tools:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="390dp"
+            android:background="@drawable/ronded_rectangle"
+            android:orientation="vertical"
+            android:textAlignment="center">
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="17dp"
+                android:scrollbarSize="4dp" />
+
+            <TextView
+                android:id="@+id/tv_pagamentoCliente"
+                android:layout_width="match_parent"
+                android:layout_height="58dp"
+                android:gravity="center"
+                android:text="Pagamento de Boletos:"
+                android:textAlignment="center"
+                android:textColor="@color/azul_fundo"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/btn_efetuarPagamentoBoleto"
+                    android:layout_width="346dp"
+                    android:layout_height="72dp"
+                    android:backgroundTint="@color/amarelo_desativado"
+                    android:enabled="false"
+                    android:text="Efetuar pagamento"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.516"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/til_valorPagamentoCliente"
+                    app:layout_constraintVertical_bias="0.12" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_valorPagamentoCliente"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="203dp"
+                    android:layout_height="66dp"
+                    android:textAlignment="textStart"
+                    app:boxStrokeColor="@color/amarelo_sol"
+                    app:hintTextColor="@color/azul_fundo"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toEndOf="@+id/til_dataBoleto"
+                    app:layout_constraintTop_toBottomOf="@+id/textInputLayout"
+                    app:layout_constraintVertical_bias="0.044">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/et_valorPagamentoCliente"
+                        android:layout_width="190dp"
+                        android:layout_height="55dp"
+                        android:layout_gravity="center"
+                        android:digits="0123456789"
+                        android:drawableEnd="@drawable/ic_baseline_attach_money_24"
+                        android:fontFamily="sans-serif-black"
+                        android:hint="Valor "
+                        android:inputType="numberDecimal"
+                        android:textColor="#363A43"
+                        tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck,TouchTargetSizeCheck">
+
+                    </androidx.appcompat.widget.AppCompatEditText>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_dataBoleto"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="156dp"
+                    android:layout_height="66dp"
+                    android:layout_marginTop="8dp"
+                    android:textAlignment="textStart"
+                    app:boxStrokeColor="@color/amarelo_sol"
+                    app:hintTextColor="@color/azul_fundo"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.02"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textInputLayout"
+                    app:layout_constraintVertical_bias="0.0">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/et_dataVencimentoBoleto"
+                        android:layout_width="146dp"
+                        android:layout_height="55dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="380dp"
+                        android:digits="0123456789/"
+                        android:drawableEnd="@drawable/ic_baseline_calendar_month_24"
+                        android:fontFamily="sans-serif-black"
+                        android:hint="Vencimento"
+                        android:inputType="date"
+                        android:maxDate="2199-12-31"
+                        android:minDate="2020-01-01"
+                        android:textColor="@color/cinza_escuro"
+                        android:textCursorDrawable="?android:attr/textCursorDrawable"
+                        android:textSize="14sp"
+                        tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck,TouchTargetSizeCheck">
+
+                    </androidx.appcompat.widget.AppCompatEditText>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textInputLayout"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="304dp"
+                    android:layout_height="61dp"
+                    android:layout_marginTop="8dp"
+                    android:textAlignment="textStart"
+                    app:boxStrokeColor="@color/amarelo_sol"
+                    app:hintTextColor="@color/azul_fundo"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.106"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/et_codigoDeBarrasPagamentoCliente"
+                        android:layout_width="303dp"
+                        android:layout_height="55dp"
+                        android:layout_gravity="center"
+                        android:digits="0123456789."
+                        android:drawableEnd="@drawable/barcode"
+                        android:fontFamily="sans-serif-black"
+                        android:hint="Código de Barras"
+                        android:inputType="number"
+                        android:textColor="@color/cinza_escuro"
+                        android:textCursorDrawable="?android:attr/textCursorDrawable"
+                        android:textSize="14sp"
+                        tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck,TouchTargetSizeCheck">
+
+                    </androidx.appcompat.widget.AppCompatEditText>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <Button
+                    android:id="@+id/btn_voltarAoMenuAnteriorPagamentoCliente"
+                    android:layout_width="346dp"
+                    android:layout_height="72dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="16dp"
+                    android:backgroundTint="@color/vermelho"
+                    android:enabled="true"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="@string/voltar_ao_menu_anterior"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.516"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/btn_efetuarPagamentoBoleto"
+                    app:layout_constraintVertical_bias="1.0" />
+
+                <ImageButton
+                    android:id="@+id/ib_cameraPagamentoCliente"
+                    android:name=".Capture"
+                    android:layout_width="55dp"
+                    android:layout_height="54dp"
+                    android:background="@drawable/ronded_rectangle"
+                    android:backgroundTint="@color/azul_fundo"
+                    android:screenOrientation="portrait"
+                    android:stateNotNeeded="true"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.42"
+                    app:layout_constraintStart_toEndOf="@+id/textInputLayout"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.050000012"
+                    app:srcCompat="@drawable/ic_baseline_camera_alt_24"
+                    tools:context=".LeitorCodigoBarras"
+                    tools:ignore="SpeakableTextPresentCheck" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_comprovantePagamento"
+        android:layout_width="378dp"
+        android:layout_height="586dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@android:color/transparent"
+        android:backgroundTint="@android:color/transparent"
+        android:backgroundTintMode="src_in"
+        android:foregroundTintMode="src_in"
+        android:visibility="gone"
+        app:cardBackgroundColor="@android:color/transparent"
+        app:cardElevation="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/gifImageView"
+        app:layout_constraintEnd_toEndOf="@+id/gifImageView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/gifImageView"
+        app:layout_constraintVertical_bias="0.62"
+        tools:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/ronded_rectangle"
+            android:orientation="vertical"
+            android:textAlignment="center">
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:scrollbarSize="2dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="62dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_comprovantePagamento9"
+                    android:layout_width="match_parent"
+                    android:layout_height="64dp"
+                    android:gravity="center"
+                    android:text="Comprovante de Pagamento"
+                    android:textAlignment="center"
+                    android:textColor="@color/azul_fundo"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="541dp">
+
+                <Button
+                    android:id="@+id/btn_voltarAoMenuAnteriorComprovantePagamento"
+                    android:layout_width="346dp"
+                    android:layout_height="72dp"
+                    android:layout_marginBottom="16dp"
+                    android:backgroundTint="@color/vermelho"
+                    android:enabled="true"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="@string/voltar_ao_menu_anterior"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView5"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <ImageView
+                    android:id="@+id/imageView5"
+                    android:layout_width="365dp"
+                    android:layout_height="428dp"
+                    android:foregroundGravity="top"
+                    android:scaleType="fitXY"
+                    android:textAlignment="viewStart"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.22"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0"
+                    app:srcCompat="@drawable/comprovante_pagamento" />
+
+                <TextView
+                    android:id="@+id/tv_valorPagadorComprovante"
+                    android:layout_width="137dp"
+                    android:layout_height="50dp"
+                    android:gravity="center"
+                    android:text="@string/notasZeradas"
+                    android:textAlignment="center"
+                    android:textColor="@color/azul_fundo"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageView5"
+                    app:layout_constraintEnd_toEndOf="@+id/imageView5"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toEndOf="@+id/tv_pagadorComprovante"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_pagamentoRealizadoComSucesso"
+                    app:layout_constraintVertical_bias="0.03" />
+
+                <TextView
+                    android:id="@+id/tv_valorDataPagamentoComprovante"
+                    android:layout_width="137dp"
+                    android:layout_height="50dp"
+                    android:gravity="center"
+                    android:text="@string/notasZeradas"
+                    android:textAlignment="center"
+                    android:textColor="@color/azul_fundo"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageView5"
+                    app:layout_constraintEnd_toEndOf="@+id/imageView5"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toEndOf="@+id/tv_dataPagamentoComprovante"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_valorPagadorComprovante"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <TextView
+                    android:id="@+id/tv_valorDataVencimentoPagamento"
+                    android:layout_width="137dp"
+                    android:layout_height="50dp"
+                    android:gravity="center"
+                    android:text="@string/notasZeradas"
+                    android:textAlignment="center"
+                    android:textColor="@color/azul_fundo"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageView5"
+                    app:layout_constraintEnd_toEndOf="@+id/imageView5"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toEndOf="@+id/tv_dataVencimentoComprovante"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_valorDataPagamentoComprovante"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <TextView
+                    android:id="@+id/tv_valorPagamentoComprovante"
+                    android:layout_width="137dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="1dp"
+                    android:layout_marginEnd="4dp"
+                    android:gravity="center"
+                    android:text="@string/notasZeradas"
+                    android:textAlignment="center"
+                    android:textColor="@color/azul_fundo"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageView5"
+                    app:layout_constraintEnd_toEndOf="@+id/imageView5"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toEndOf="@+id/tv_pagamentoComprovante"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_valorDataVencimentoPagamento"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <TextView
+                    android:id="@+id/tv_valorCodigoBarrasComprovante"
+                    android:layout_width="137dp"
+                    android:layout_height="50dp"
+                    android:layout_marginEnd="4dp"
+                    android:gravity="center"
+                    android:text="@string/notasZeradas"
+                    android:textAlignment="center"
+                    android:textColor="@color/azul_fundo"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageView5"
+                    app:layout_constraintEnd_toEndOf="@+id/imageView5"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toEndOf="@+id/tv_codigoBarrasComprovante"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_valorPagamentoComprovante"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <TextView
+                    android:id="@+id/tv_pagamentoComprovante"
+                    android:layout_width="190dp"
+                    android:layout_height="50dp"
+                    android:gravity="center|start"
+                    android:text="Valor do Pagamento:"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/azul_fundo"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageView5"
+                    app:layout_constraintEnd_toEndOf="@+id/imageView5"
+                    app:layout_constraintHorizontal_bias="0.16"
+                    app:layout_constraintStart_toStartOf="@+id/imageView5"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_dataVencimentoComprovante"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <TextView
+                    android:id="@+id/tv_dataVencimentoComprovante"
+                    android:layout_width="190dp"
+                    android:layout_height="50dp"
+                    android:gravity="center|start"
+                    android:text="Data do Vencimento:"
+                    android:textColor="@color/azul_fundo"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageView5"
+                    app:layout_constraintEnd_toEndOf="@+id/imageView5"
+                    app:layout_constraintHorizontal_bias="0.16"
+                    app:layout_constraintStart_toStartOf="@+id/imageView5"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_dataPagamentoComprovante"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <TextView
+                    android:id="@+id/tv_dataPagamentoComprovante"
+                    android:layout_width="190dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="8dp"
+                    android:gravity="center|start"
+                    android:text="Data do Pagamento:"
+                    android:textColor="@color/azul_fundo"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageView5"
+                    app:layout_constraintEnd_toEndOf="@+id/imageView5"
+                    app:layout_constraintHorizontal_bias="0.119"
+                    app:layout_constraintStart_toStartOf="@+id/imageView5"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_pagadorComprovante"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <TextView
+                    android:id="@+id/tv_pagadorComprovante"
+                    android:layout_width="190dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center|start"
+                    android:text="Pagador:"
+                    android:textColor="@color/azul_fundo"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageView5"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.102"
+                    app:layout_constraintStart_toStartOf="@+id/imageView5"
+                    app:layout_constraintTop_toBottomOf="@+id/iv_checkedPagamentoComprovante"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <TextView
+                    android:id="@+id/tv_codigoBarrasComprovante"
+                    android:layout_width="190dp"
+                    android:layout_height="50dp"
+                    android:gravity="center|start"
+                    android:text="Cód. de Barras:"
+                    android:textColor="@color/azul_fundo"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageView5"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.155"
+                    app:layout_constraintStart_toStartOf="@+id/imageView5"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_pagamentoComprovante"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <ImageView
+                    android:id="@+id/iv_checkedPagamentoComprovante"
+                    android:layout_width="88dp"
+                    android:layout_height="83dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageView5"
+                    app:layout_constraintEnd_toEndOf="@+id/imageView5"
+                    app:layout_constraintHorizontal_bias="0.05"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/imageView5"
+                    app:layout_constraintVertical_bias="0.084"
+                    app:srcCompat="@drawable/ic_baseline_check_circle_outline_24" />
+
+                <TextView
+                    android:id="@+id/tv_pagamentoRealizadoComSucesso"
+                    android:layout_width="259dp"
+                    android:layout_height="83dp"
+                    android:gravity="center"
+                    android:text="PAGAMENTO REALIZADO COM SUCESSO"
+                    android:textColor="@color/azul_fundo"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageView5"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toEndOf="@+id/iv_checkedPagamentoComprovante"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.084" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_saldoPagamentoIndisponivel"
+        android:layout_width="375dp"
+        android:layout_height="276dp"
+        android:background="@android:color/transparent"
+        android:backgroundTint="@android:color/transparent"
+        android:backgroundTintMode="src_in"
+        android:visibility="gone"
+        app:cardBackgroundColor="@android:color/transparent"
+        app:cardElevation="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/gifImageView"
+        app:layout_constraintEnd_toEndOf="@+id/gifImageView"
+        app:layout_constraintStart_toStartOf="@+id/gifImageView"
+        app:layout_constraintTop_toTopOf="@+id/gifImageView"
+        tools:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="274dp"
+            android:background="@drawable/ronded_rectangle"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:textAlignment="center">
+
+            <TextView
+                android:id="@+id/tv_mensagemErroPagamento"
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:fontFamily="sans-serif-black"
+                android:gravity="center"
+                android:text="Pagamento não realizado por falta de saldo"
+                android:textAlignment="center"
+                android:textColor="@color/vermelho"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btn_tentarRealizarNovoPagamento"
+                android:layout_width="336dp"
+                android:layout_height="72dp"
+                android:backgroundTint="@color/amarelo_sol"
+                android:enabled="true"
+                android:fontFamily="sans-serif-medium"
+                android:text="Tentar novamente"
+                android:textStyle="bold" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="11dp" />
+
+            <Button
+                android:id="@+id/btn_voltarAoMenuAnteriorSaldoPagamentoInsuficiente"
+                android:layout_width="336dp"
+                android:layout_height="72dp"
+                android:backgroundTint="@color/vermelho"
+                android:enabled="true"
+                android:fontFamily="sans-serif-medium"
+                android:text="@string/voltar_ao_menu_anterior"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,726 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ModuloAdministrativoActivity">
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/giv_adm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        android:src="@drawable/fundo_tela_cliente"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/tv_nomeAdm"
+        android:layout_width="271dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="16dp"
+        android:gravity="center_vertical"
+        android:text="BEM-VINDO, "
+        android:textAllCaps="true"
+        android:textColor="@color/amarelo_sol"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.821"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_rodapeAdm"
+        android:layout_width="376dp"
+        android:layout_height="42dp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:gravity="center_horizontal|top"
+        android:lineSpacingMultiplier="1.2"
+        android:text="@string/rodape"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="@color/amarelo_desativado"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/giv_adm"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_adm"
+        android:layout_width="374dp"
+        android:layout_height="472dp"
+        android:background="@android:color/transparent"
+        android:backgroundTint="@android:color/transparent"
+        android:backgroundTintMode="src_in"
+        android:foregroundTintMode="src_in"
+        android:visibility="visible"
+        app:cardBackgroundColor="@android:color/transparent"
+        app:cardElevation="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/giv_adm"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/giv_adm"
+        tools:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="469dp"
+            android:background="@drawable/ronded_rectangle"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:textAlignment="center">
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="17dp"
+                android:scrollbarSize="4dp" />
+
+            <TextView
+                android:id="@+id/tv_valorQueDesejaSacar"
+                android:layout_width="match_parent"
+                android:layout_height="58dp"
+                android:gravity="center"
+                android:text="Qual operação você deseja realizar?"
+                android:textAlignment="center"
+                android:textColor="@color/azul_fundo"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btn_relatorioCedulas"
+                android:layout_width="336dp"
+                android:layout_height="72dp"
+                android:backgroundTint="@color/amarelo_sol"
+                android:enabled="true"
+                android:fontFamily="sans-serif-medium"
+                android:text="Relatório de Cédulas"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btn_valorTotalDisponivel"
+                android:layout_width="338dp"
+                android:layout_height="72dp"
+                android:backgroundTint="@color/amarelo_sol"
+                android:enabled="true"
+                android:fontFamily="sans-serif-medium"
+                android:text="Valor Total Disponivel"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btn_reposicaoCedulas"
+                android:layout_width="338dp"
+                android:layout_height="72dp"
+                android:backgroundTint="@color/amarelo_sol"
+                android:enabled="true"
+                android:fontFamily="sans-serif-medium"
+                android:text="Reposição de cédulas"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btn_alterarCotaMinima"
+                android:layout_width="337dp"
+                android:layout_height="72dp"
+                android:backgroundTint="@color/amarelo_sol"
+                android:enabled="true"
+                android:fontFamily="sans-serif-medium"
+                android:text="Alterar Cota Mínima"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btn_sairAdm"
+                android:layout_width="336dp"
+                android:layout_height="72dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="8dp"
+                android:backgroundTint="@color/vermelho"
+                android:enabled="true"
+                android:fontFamily="sans-serif-medium"
+                android:text="Sair"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_relatorioCedulas"
+        android:layout_width="382dp"
+        android:layout_height="533dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@android:color/transparent"
+        android:backgroundTint="@android:color/transparent"
+        android:backgroundTintMode="src_in"
+        android:foregroundTintMode="src_in"
+        android:visibility="gone"
+        app:cardBackgroundColor="@android:color/transparent"
+        app:cardElevation="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/giv_adm"
+        app:layout_constraintEnd_toEndOf="@+id/giv_adm"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/giv_adm"
+        tools:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ronded_rectangle"
+            android:orientation="vertical"
+            android:textAlignment="center">
+
+            <TextView
+                android:id="@+id/tv_relatorioCedulas"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:text="Valor e Quantidade de Notas Disponiveis:"
+                android:textAlignment="center"
+                android:textColor="@color/azul_fundo"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="483dp">
+
+                <Button
+                    android:id="@+id/btn_voltarAoMenuAnteriorRelatorioCedulas"
+                    android:layout_width="336dp"
+                    android:layout_height="72dp"
+                    android:layout_marginBottom="16dp"
+                    android:backgroundTint="@color/vermelho"
+                    android:enabled="true"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="@string/voltar_ao_menu_anterior"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="336dp"
+                    android:layout_height="374dp"
+                    android:scaleType="fitXY"
+                    app:layout_constraintBottom_toTopOf="@+id/btn_voltarAoMenuAnteriorRelatorioCedulas"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.514"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0"
+                    app:srcCompat="@drawable/cedulas" />
+
+                <LinearLayout
+                    android:layout_width="200dp"
+                    android:layout_height="368dp"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageView"
+                    app:layout_constraintEnd_toEndOf="@+id/imageView"
+                    app:layout_constraintHorizontal_bias="0.948"
+                    app:layout_constraintStart_toStartOf="@+id/imageView"
+                    app:layout_constraintTop_toTopOf="@+id/imageView"
+                    app:layout_constraintVertical_bias="0.0">
+
+                    <TextView
+                        android:id="@+id/tv_nota100RelatorioCedulas"
+                        android:layout_width="match_parent"
+                        android:layout_height="61dp"
+                        android:gravity="center"
+                        android:text="@string/notasZeradas"
+                        android:textAlignment="center"
+                        android:textColor="@color/cor_nota100"
+                        android:textSize="50sp" />
+
+                    <TextView
+                        android:id="@+id/tv_nota50RelatorioCedulas"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:gravity="center"
+                        android:text="@string/notasZeradas"
+                        android:textAlignment="center"
+                        android:textColor="@color/cor_nota50"
+                        android:textSize="50sp" />
+
+                    <TextView
+                        android:id="@+id/tv_nota20RelatorioCedulas"
+                        android:layout_width="match_parent"
+                        android:layout_height="59dp"
+                        android:gravity="center"
+                        android:text="@string/notasZeradas"
+                        android:textAlignment="center"
+                        android:textColor="@color/cor_nota20"
+                        android:textSize="50sp" />
+
+                    <TextView
+                        android:id="@+id/tv_nota10RelatorioCedulas"
+                        android:layout_width="match_parent"
+                        android:layout_height="62dp"
+                        android:gravity="center"
+                        android:text="@string/notasZeradas"
+                        android:textAlignment="center"
+                        android:textColor="@color/cor_nota10"
+                        android:textSize="50sp" />
+
+                    <TextView
+                        android:id="@+id/tv_nota5RelatorioCedulas"
+                        android:layout_width="match_parent"
+                        android:layout_height="63dp"
+                        android:gravity="center"
+                        android:text="@string/notasZeradas"
+                        android:textAlignment="center"
+                        android:textColor="@color/cor_nota5"
+                        android:textSize="50sp" />
+
+                    <TextView
+                        android:id="@+id/tv_nota2RelatorioCedulas"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/notasZeradas"
+                        android:textAlignment="center"
+                        android:textColor="@color/cor_nota2"
+                        android:textSize="50sp" />
+
+                </LinearLayout>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_valorTotalDisponivel"
+        android:layout_width="377dp"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:backgroundTint="@android:color/transparent"
+        android:backgroundTintMode="src_in"
+        android:foregroundTintMode="src_in"
+        android:visibility="gone"
+        app:cardBackgroundColor="@android:color/transparent"
+        app:cardElevation="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/giv_adm"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="390dp"
+            android:background="@drawable/ronded_rectangle"
+            android:orientation="vertical"
+            android:textAlignment="center">
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="17dp"
+                android:scrollbarSize="4dp" />
+
+            <TextView
+                android:id="@+id/tv_saldoTotalDisponivel"
+                android:layout_width="match_parent"
+                android:layout_height="58dp"
+                android:gravity="center"
+                android:text="Valor Total Disponível no Caixa:"
+                android:textAlignment="center"
+                android:textColor="@color/azul_fundo"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/btn_voltarAoMenuPrincipalValorTotalDisponivel"
+                    android:layout_width="346dp"
+                    android:layout_height="72dp"
+                    android:layout_marginBottom="16dp"
+                    android:backgroundTint="@color/vermelho"
+                    android:enabled="true"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="@string/voltar_ao_menu_anterior"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.516"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_valorTotalDisponivel"
+                    app:layout_constraintVertical_bias="1.0" />
+
+                <TextView
+                    android:id="@+id/tv_valorTotalDisponivel"
+                    android:layout_width="316dp"
+                    android:layout_height="91dp"
+                    android:gravity="center"
+                    android:textColor="@color/amarelo_sol"
+                    android:textSize="50sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.491"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.303" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_reposicaoCedulas"
+        android:layout_width="382dp"
+        android:layout_height="606dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@android:color/transparent"
+        android:backgroundTint="@android:color/transparent"
+        android:backgroundTintMode="src_in"
+        android:foregroundTintMode="src_in"
+        android:visibility="gone"
+        app:cardBackgroundColor="@android:color/transparent"
+        app:cardElevation="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/giv_adm"
+        app:layout_constraintEnd_toEndOf="@+id/giv_adm"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/giv_adm"
+        tools:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/ronded_rectangle"
+            android:orientation="vertical"
+            android:textAlignment="center">
+
+            <TextView
+                android:id="@+id/tv_reposicaoCelulas"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:text="Entre com o valor de cada nota que será reposta:"
+                android:textAlignment="center"
+                android:textColor="@color/azul_fundo"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="582dp">
+
+                <TextView
+                    android:id="@+id/tv_valorTotalDisponivelReposicaoCedulas"
+                    android:layout_width="324dp"
+                    android:layout_height="54dp"
+                    android:editable="false"
+                    android:gravity="center"
+                    android:text="@string/notasZeradas"
+                    android:textAlignment="center"
+                    android:textColor="@color/amarelo_sol"
+                    android:textSize="24sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/btn_voltarAoMenuAnteriorReposicaoCelulas"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.491"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+                    app:layout_constraintVertical_bias="0.051" />
+
+                <Button
+                    android:id="@+id/btn_salvarReposicaoCedulas"
+                    android:layout_width="337dp"
+                    android:layout_height="72dp"
+                    android:backgroundTint="@color/amarelo_sol"
+                    android:enabled="true"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="salvar reposição"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/btn_voltarAoMenuAnteriorReposicaoCelulas"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.488"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_valorTotalDisponivelReposicaoCedulas"
+                    app:layout_constraintVertical_bias="0.04" />
+
+                <Button
+                    android:id="@+id/btn_voltarAoMenuAnteriorReposicaoCelulas"
+                    android:layout_width="336dp"
+                    android:layout_height="72dp"
+                    android:layout_marginBottom="32dp"
+                    android:backgroundTint="@color/vermelho"
+                    android:enabled="true"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="@string/voltar_ao_menu_anterior"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.511"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <ImageView
+                    android:id="@+id/iv_ReposicaoCelulas"
+                    android:layout_width="334dp"
+                    android:layout_height="345dp"
+                    android:scaleType="fitXY"
+                    app:layout_constraintBottom_toTopOf="@+id/btn_voltarAoMenuAnteriorReposicaoCelulas"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.514"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0"
+                    app:srcCompat="@drawable/cedulas" />
+
+                <LinearLayout
+                    android:id="@+id/linearLayout"
+                    android:layout_width="196dp"
+                    android:layout_height="337dp"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toBottomOf="@+id/iv_ReposicaoCelulas"
+                    app:layout_constraintEnd_toEndOf="@+id/iv_ReposicaoCelulas"
+                    app:layout_constraintHorizontal_bias="0.948"
+                    app:layout_constraintStart_toStartOf="@+id/iv_ReposicaoCelulas"
+                    app:layout_constraintTop_toTopOf="@+id/iv_ReposicaoCelulas">
+
+                    <EditText
+                        android:id="@+id/tv_nota100ReposicaoCedulas"
+                        android:layout_width="match_parent"
+                        android:layout_height="55dp"
+                        android:background="@android:color/transparent"
+                        android:digits="0123456789"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:text="@string/notasZeradas"
+                        android:textAlignment="center"
+                        android:textColor="@color/cor_nota100"
+                        android:textSize="50sp" />
+
+                    <EditText
+                        android:id="@+id/tv_nota50ReposicaoCedulas"
+                        android:layout_width="match_parent"
+                        android:layout_height="55dp"
+                        android:background="@android:color/transparent"
+                        android:digits="0123456789"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:text="@string/notasZeradas"
+                        android:textColor="@color/cor_nota50"
+                        android:textSize="50sp" />
+
+                    <EditText
+                        android:id="@+id/tv_nota20ReposicaoCedulas"
+                        android:layout_width="match_parent"
+                        android:layout_height="55dp"
+                        android:background="@android:color/transparent"
+                        android:digits="0123456789"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:text="@string/notasZeradas"
+                        android:textAlignment="center"
+                        android:textColor="@color/cor_nota20"
+                        android:textSize="50sp" />
+
+                    <EditText
+                        android:id="@+id/tv_nota10ReposicaoCedulas"
+                        android:layout_width="match_parent"
+                        android:layout_height="55dp"
+                        android:background="@android:color/transparent"
+                        android:digits="0123456789"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:text="@string/notasZeradas"
+                        android:textAlignment="center"
+                        android:textColor="@color/cor_nota10"
+                        android:textSize="50sp" />
+
+                    <EditText
+                        android:id="@+id/tv_nota5ReposicaoCedulas"
+                        android:layout_width="match_parent"
+                        android:layout_height="57dp"
+                        android:background="@android:color/transparent"
+                        android:digits="0123456789"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:text="@string/notasZeradas"
+                        android:textAlignment="center"
+                        android:textColor="@color/cor_nota5"
+                        android:textSize="50sp" />
+
+                    <EditText
+                        android:id="@+id/tv_nota2ReposicaoCedulas"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:digits="0123456789"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:text="@string/notasZeradas"
+                        android:textAlignment="center"
+                        android:textColor="@color/cor_nota2"
+                        android:textSize="50sp" />
+
+                </LinearLayout>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_cotaMinima"
+        android:layout_width="380dp"
+        android:layout_height="485dp"
+        android:background="@android:color/transparent"
+        android:backgroundTint="@android:color/transparent"
+        android:backgroundTintMode="src_in"
+        android:foregroundTintMode="src_in"
+        android:visibility="gone"
+        app:cardBackgroundColor="@android:color/transparent"
+        app:cardElevation="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/giv_adm"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/ronded_rectangle"
+            android:orientation="vertical"
+            android:textAlignment="center">
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="17dp"
+                android:scrollbarSize="4dp" />
+
+            <TextView
+                android:id="@+id/tv_valorCotaMinima"
+                android:layout_width="match_parent"
+                android:layout_height="58dp"
+                android:gravity="center"
+                android:text="Valor da Cota Mínima do Caixa:"
+                android:textAlignment="center"
+                android:textColor="@color/azul_fundo"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="407dp">
+
+                <Button
+                    android:id="@+id/btn_salvarCotaMinima"
+                    android:layout_width="346dp"
+                    android:layout_height="72dp"
+                    android:layout_marginBottom="100dp"
+                    android:backgroundTint="@color/amarelo_desativado"
+                    android:enabled="false"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Atualizar Cota Mínima"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.477"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/til_valorCotaMinima"
+                    app:layout_constraintVertical_bias="1.0" />
+
+                <TextView
+                    android:id="@+id/tv_atualizarCotaMinima"
+                    android:layout_width="match_parent"
+                    android:layout_height="58dp"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center"
+                    android:text="Atualizar o valor da Cota Mímima:"
+                    android:textAlignment="center"
+                    android:textColor="@color/azul_fundo"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_cotaMinimaDisponivel"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_valorCotaMinima"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="340dp"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="8dp"
+                    android:textAlignment="textStart"
+                    app:boxStrokeColor="@color/amarelo_sol"
+                    app:hintTextColor="@color/azul_fundo"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.486"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_atualizarCotaMinima"
+                    app:layout_constraintVertical_bias="0.0">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/et_valorCotaMinima"
+                        android:layout_width="340dp"
+                        android:layout_height="55dp"
+                        android:layout_gravity="center"
+                        android:digits="0123456789"
+                        android:drawableEnd="@drawable/ic_baseline_attach_money_24"
+                        android:fontFamily="sans-serif-black"
+                        android:hint="Valor Ex.: R$1.000,00"
+                        android:inputType="numberDecimal"
+                        android:textColor="#363A43"
+                        tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck,TouchTargetSizeCheck">
+
+                    </androidx.appcompat.widget.AppCompatEditText>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <Button
+                    android:id="@+id/btn_voltarAoMenuAnteriorCotaMinima"
+                    android:layout_width="346dp"
+                    android:layout_height="72dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="16dp"
+                    android:backgroundTint="@color/vermelho"
+                    android:enabled="true"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="@string/voltar_ao_menu_anterior"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/btn_salvarCotaMinima"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <TextView
+                    android:id="@+id/tv_cotaMinimaDisponivel"
+                    android:layout_width="336dp"
+                    android:layout_height="65dp"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center"
+                    android:textColor="@color/amarelo_sol"
+                    android:textSize="42sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.477"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>
