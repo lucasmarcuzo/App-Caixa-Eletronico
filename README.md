@@ -5,7 +5,7 @@
 <img  width="304"  height="540"  src="Apresentation/caixaEletronico.gif">
 </p>
 
-[![APK](https://github.com/lucasmarcuzo/App-Caixa-Eletronico/raw/main/CaixaEletronico/apk/debug/app-debug.apk)](https://github.com/lucasmarcuzo/App-Caixa-Eletronico/raw/main/CaixaEletronico/apk/debug/app-debug.apk) 
+[![APK](https://img.shields.io/badge/APK-Dowload-green&?style=flat&logo=android&link=https://github.com/lucasmarcuzo/App-Caixa-Eletronico/raw/main/CaixaEletronico/apk/debug/app-debug.apk)](https://github.com/lucasmarcuzo/App-Caixa-Eletronico/raw/main/CaixaEletronico/apk/debug/app-debug.apk) 
 
 ## 🛠 Tecnologias utilizadas:
 
